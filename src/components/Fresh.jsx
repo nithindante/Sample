@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/AboutUs.css';
-import gingerImg from '../assets/ginger.jpg';
-import bellPepperImg from '../assets/capsicum.jpg';
+import gingerImg from '../assets/ginger.avif';
+import bellPepperImg from '../assets/capsicum.avif';
 import basilImg from '../assets/basilleaves.jpg';
-import celeryImg from '../assets/calary.jpg';
+import celeryImg from '../assets/calary.avif';
 import sweetPotatoImg from '../assets/sweet.jpg';
 import spinachImg from '../assets/spinach.jpg';
 import FadeinSection from './FadeinSection';
