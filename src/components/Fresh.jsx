@@ -41,9 +41,11 @@ const freshItems = [
 ];
 
 const Fresh = () => (
-  <FadeinSection> 
+  // <FadeinSection> 
   <div className="w-full min-h-screen flex flex-col items-center bg-white pb-20">
+    <FadeinSection>
     <h1 className="!text-[58px] text-9xl md:text-9xl font-extrabold text-center mt-16 mb-16 py-20">Naturally Fresh, Always</h1>
+    </FadeinSection>
     <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-12 px-4 md:px-0">
       {freshItems.map((item, idx) => (
         <div key={idx} className="flex flex-col gap-2">
@@ -56,7 +58,7 @@ const Fresh = () => (
       ))}
     </div>
   </div>
-  </FadeinSection>
+  // </FadeinSection>
 );
 
 export default Fresh;

@@ -38,10 +38,10 @@ h3{
 }
 
 /* Remove underlines from navigation links */
-.header-container a {
+.a-tags{
     text-decoration: none !important;
 }
 
-.header-container a:hover {
+.a-tags:hover {
     text-decoration: none !important;
 }

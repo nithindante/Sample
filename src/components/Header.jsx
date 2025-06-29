@@ -38,12 +38,14 @@ function Header() {
         };
     }, [menuRef]);
 
-
+    function handleMenuLinkClick() {
+        setDisplayItems(false);
+    }
 
     return (
         <div className="relative w-full" ref={menuRef}>
             <div className="header-container grid [grid-template-columns:1fr_0.2fr] lg:[grid-template-columns:0.5fr_1fr]">
-                <Link to={'/'} className="cursor-pointer !no-underline !hover:no-underline flex items-center"><h3 className='!no-underline hover:!no-underline font-sans justify-center flex-auto header-div text-white'>Mezraw Solutions</h3></Link>
+                <Link to={'/'} className="menu-link cursor-pointer !no-underline !hover:no-underline flex items-center"><h3 className='!no-underline hover:!no-underline font-sans justify-center flex-auto header-div text-white'>Mezraw Solutions</h3></Link>
                 
                 {isSmallScreen ? (
                     <div className='flex justify-center items-center'>
@@ -58,7 +60,7 @@ function Header() {
                         <Link
                             key={index}
                             to={item.path}
-                            className='cursor-pointer text-white no-underline hover:!text-green-500 transition-colors duration-300 whitespace-nowrap text-base font-bold'
+                            className=' cursor-pointer text-white !no-underline hover:!text-green-500 transition-colors duration-300 whitespace-nowrap text-base font-bold'
                         >
                             {item.name}
                         </Link>
@@ -87,7 +89,8 @@ function Header() {
                         <Link
                             key={index}
                             to={item.path}
-                            className='cursor-pointer text-white text-lg py-3 w-full text-right border-b border-gray-700 hover:!text-green-500 transition-colors duration-300'
+                            className='menu-link cursor-pointer text-white text-lg py-3 w-full text-right hover:!text-green-500 transition-colors duration-300 !no-underline'
+                            onClick={handleMenuLinkClick}
                         >
                             {item.name}
                         </Link>
@@ -97,5 +100,5 @@ function Header() {
         </div>
     );
 }
-
+// menu-link cursor-pointer text-white text-lg py-3 w-full text-right border-b border-gray-700 hover:!text-green-500 transition-colors duration-300 !no-underline a-tags
 export default Header;
